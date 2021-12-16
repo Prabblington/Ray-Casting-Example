@@ -20,7 +20,7 @@ class Particle
   }
   
   //method checks if the particle intersects with the walls
-  public void check(Boundary[] walls) 
+  public void check(ArrayList<Boundary> walls) 
   {
     for(Ray ray : this.rays)
     {
