@@ -19,11 +19,6 @@ public void setup()
     walls[i] = new Boundary(x1, y1, x2, y2);
   }
   
-  walls[walls.length-4] = (new Boundary(0, 0, width, 0));
-  walls[walls.length-3] = (new Boundary(width, 0, width, height));
-  walls[walls.length-2] = (new Boundary(width, height, 0, height));
-  walls[walls.length-1] = (new Boundary(0, height, 0, 0));
-  
   particle = new Particle();
 }
 
