@@ -8,7 +8,7 @@ class Particle
     this.position = new PVector(width / 2, height / 2);
     this.rays = new Ray[360];
     
-    for (int a = 0; a < this.rays.length; a++) 
+    for(int a = 0; a < this.rays.length; a++) 
     {
       this.rays[a] = new Ray(this.position, radians(a));
     }
@@ -43,10 +43,10 @@ class Particle
       PVector closest = null;
       float viewDist = 50000;
       
-      for (Boundary wall : walls) 
+      for(Boundary wall : walls) 
       {
         PVector pt = ray.cast(wall);
-        if (pt != null) 
+        if(pt != null) 
         {
           float distance = PVector.dist(this.position, pt);
           if (distance < viewDist) 
@@ -56,7 +56,7 @@ class Particle
           }
         }
       }
-      if (closest != null) 
+      if(closest != null) 
       {
         stroke(255, 5, 120);
         line(this.position.x, this.position.y, closest.x, closest.y);
@@ -66,7 +66,7 @@ class Particle
   
   public void render()
   {
-    for (Ray ray : this.rays) 
+    for(Ray ray : this.rays) 
     {
       ray.render();
     }
