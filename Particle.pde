@@ -70,6 +70,5 @@ class Particle
     {
       ray.render();
     }
-  }
-  
+  }  
 }
