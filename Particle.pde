@@ -14,6 +14,22 @@ class Particle
     }
   }
   
+  public void setPositionX(float x)
+  {
+   position.x = x; 
+  }
+  public void setPositionY(float y)
+  {
+   position.y = y; 
+  }  
+  public float getPositionX()
+  { 
+   return (float)position.x; 
+  }
+  public float getPositionY()
+  { 
+   return (float)position.y; 
+  }  
   public void update(float x, float y)
   {
    this.position.set(x, y); 
@@ -25,7 +41,7 @@ class Particle
     for(Ray ray : this.rays)
     {
       PVector closest = null;
-      float viewDist = width;
+      float viewDist = 50000;
       
       for (Boundary wall : walls) 
       {
