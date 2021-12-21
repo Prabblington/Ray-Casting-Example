@@ -25,6 +25,27 @@ public void setup()
   particle = new Particle();
 }
 
+public void checkMapCollide()
+{
+  //collision with edges
+  if(particle.getPositionX() <= 0)
+  {
+   particle.setPositionX(0); 
+  }
+  else if(particle.getPositionY() <= 0)
+  {
+   particle.setPositionY(0); 
+  }
+  else if(particle.getPositionX() >= width)
+  {
+   particle.setPositionX(width); 
+  }
+  else if(particle.getPositionY() >= height)
+  {
+   particle.setPositionY(height); 
+  }
+}
+
 public void draw()
 {
   background(30);
