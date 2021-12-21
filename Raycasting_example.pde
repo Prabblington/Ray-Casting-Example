@@ -13,7 +13,7 @@ public void setup()
   int wallMax = 10;
   walls = new ArrayList();
   
-  for (int i = 0; i < wallMax; i++) 
+  for(int i = 0; i < wallMax; i++) 
   {    
     float x1 = random(width);
     float x2 = random(width);
@@ -50,7 +50,8 @@ public void draw()
 {
   background(30);
   stroke(255);
-  for (Boundary wall : walls) 
+  
+  for(Boundary wall : walls) 
   {
     wall.render();
   }
